@@ -1,0 +1,29 @@
+{
+  "name": "koa-crud-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/src/app.js",
+  "scripts": {
+    "start": "node ./build/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tadanasi/koa-crud-ts.git"
+  },
+  "author": "Tadanasi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tadanasi/koa-crud-ts/issues"
+  },
+  "homepage": "https://github.com/tadanasi/koa-crud-ts#readme",
+  "dependencies": {
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^10.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21"
+  }
+}
