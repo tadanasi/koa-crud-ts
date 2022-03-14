@@ -7,6 +7,6 @@ Steps to start app:
 
 3.     npm start
 
-4.     Copy test_data.json to MongoDb (optional)
+4.     Copy test_data.json to MongoDb -> koacrudts -> films (optional)
 
 5.     Enjoy:) (required)
