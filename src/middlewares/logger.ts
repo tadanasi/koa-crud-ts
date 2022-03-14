@@ -27,3 +27,7 @@ export class CustomLogger {
 export const LoggerMiddleware = (text: string, args?: any) => {
     CustomLogger.info(text);
 }
+
+export const ErrorHandler = (error?: any) => {
+    if (error) CustomLogger.error(`${error}`);
+}
