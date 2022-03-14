@@ -1,0 +1,30 @@
+[
+  {
+    "name": "The Road Warrior",
+    "category": "action"
+  },
+  {
+    "name": "King Kong",
+    "category": "adventure"
+  },
+  {
+    "name": "Duck Soup",
+    "category": "comedy"
+  },
+  {
+    "name": "Aliens",
+    "category": "action"
+  },
+  {
+    "name": "Some Like It Hot",
+    "category": "comedy"
+  },
+  {
+    "name": "Airplane!",
+    "category": "comedy"
+  },
+  {
+    "name": "Bonnie and Clyde",
+    "category": "crime"
+  }
+]

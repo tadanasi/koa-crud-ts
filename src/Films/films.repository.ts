@@ -1,7 +1,6 @@
 import {ICategoriesWithLength} from "./types/categories-with-length.interface";
 import {Film} from "../DB/models";
-import {ErrorHandler} from "../middlewares/logger";
-import {IFilm} from "./types/film.interface";
+import {CustomLogger, ErrorHandler} from "../middlewares/logger";
 
 export class FilmsRepository {
     constructor() {
@@ -26,6 +25,7 @@ export class FilmsRepository {
         return allData.reduce((acc: any, {category}) => {
             if (!acc[category]) acc[category] = 0;
             acc[category]++;
+            return acc;
         }, {});
     }
 }

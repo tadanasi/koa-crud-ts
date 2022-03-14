@@ -20,3 +20,5 @@ FilmsRouter.get('/:category', async (ctx, next) => {
     const films = await filmsService.getFilmsByCategory(ctx.params.category);
     ctx.body = films;
 });
+
+export default FilmsRouter;

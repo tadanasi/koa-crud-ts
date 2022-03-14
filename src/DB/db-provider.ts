@@ -30,10 +30,10 @@ export class DBProvider {
     }
 
     private closeConnection() {
-        this.db.connection.close(function () {
-            CustomLogger.info('Mongoose default connection disconnected through app termination');
-            process.exit(0);
-        });
+        CustomLogger.info('Mongoose default connection disconnected through app termination');
+        // this.db.connection.close(function () {
+        //     process.exit(0);
+        // });
     }
 
     public start() {
