@@ -1,6 +1,7 @@
 import {AppHolder} from "./app";
 import {DBProvider} from "./DB/db-provider";
 import {DB_URI} from "./config";
+import {CustomLogger} from "./middlewares/logger";
 
 (async () => {
     try {
@@ -11,7 +12,7 @@ import {DB_URI} from "./config";
         db.start();
         app.start();
     } catch (error) {
-        //CustomLogger.info(`Unexpected error: ${error}`);
+        CustomLogger.error(`Unexpected error: ${error}`);
         process.exit(1);
     }
 })();

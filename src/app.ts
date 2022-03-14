@@ -10,7 +10,7 @@ export class AppHolder {
     public app: koa;
     public port: number;
     private routers: router[];
-    private logger: any;
+    private readonly logger: any;
 
     constructor(port: number, routers: router[]) {
         this.app = new koa();
@@ -33,11 +33,11 @@ export class AppHolder {
         );
         server.listen(this.port);
         server.on('error', (error: any) => {
-            this.logger.error(`Start server error: ${error}`);
+            this.logger(`Start server error: ${error}`);
             process.exit(1);
         });
         server.on('listening', () => {
-            this.logger.info(`Server started at http://localhost:${this.port}/`)
+            this.logger(`Server started at http://localhost:${this.port}/`)
         });
     }
 }

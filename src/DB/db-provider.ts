@@ -1,8 +1,8 @@
-import {LoggerMiddleware} from "../middlewares/logger";
+import {CustomLogger} from "../middlewares/logger";
 import * as mongoose from "mongoose";
 
 export class DBProvider {
-    private url: string;
+    private readonly url: string;
     private db: any;
 
     constructor(url: string) {
@@ -14,16 +14,16 @@ export class DBProvider {
 
     private init() {
         this.db.connection.on("error", async (error: string) => {
-            //CustomLogger.error(`Mongoose connection error ${error}`);
+            CustomLogger.error(`Mongoose connection error ${error}`);
             process.exit(0);
         });
 
         this.db.connection.on("open", () => {
-            //CustomLogger.info("Connect to MongoDB.");
+            CustomLogger.info("Connect to MongoDB.");
         });
 
         this.db.connection.on('disconnected', function () {
-            //CustomLogger.info('Mongoose default connection disconnected');
+            CustomLogger.info('Mongoose default connection disconnected');
         });
 
         process.on('SIGINT', this.closeConnection);
@@ -31,7 +31,7 @@ export class DBProvider {
 
     private closeConnection() {
         this.db.connection.close(function () {
-            //CustomLogger.info('Mongoose default connection disconnected through app termination');
+            CustomLogger.info('Mongoose default connection disconnected through app termination');
             process.exit(0);
         });
     }
